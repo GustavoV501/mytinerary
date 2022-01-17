@@ -1,25 +1,45 @@
-import logo from './logo.svg';
+import React from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
+import Header from './Components/Header';
+import Titulo from './Components/Titulo';
+import CarouselContainer from './Components/CarouselContainer';
+import Footer from './Components/Footer';
+import Search from './Components/Search';
+// import SignUp from './Components/Register/Signin';
+// import Login from './Components/Register/login';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from "react-router-dom";
+// import { Container } from '@material-ui/core';
+
+
 
 function App() {
   return (
+    
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Container maxWidth="md">
+          <Routes>
+              <Route path="/signup"  component={<SignUp/>}/>
+              <Route path="/login" component={<Login/>}/>
+          </Routes>
+      </Container> */}
+    
+        <Header/>
+        <Search/>
+        <Titulo />
+        <CarouselContainer/>
+        <Footer/>
+        <Router>
+        <Route exact path="/" component={App} />
+        <Route exact path="/search" component={Search} />
+        </Router>
+
     </div>
   );
 }
-
 export default App;
