@@ -14,10 +14,10 @@
 .overflow{
     overflow: hidden;
 }
-.card-img-top{
+.overflow .card-img-top{
     transition: all 0.7s ease-in-out ;
 
 }
-.card-img-top:hover{
+.overflow .card-img-top:hover{
     transform: scale(1.8);
 }

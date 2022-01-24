@@ -18,21 +18,21 @@ class Footer extends React.Component {
                 </h1>
                 </div>
                 {/* Columna 2 */}
-                <div className="col">
+                {/* <div className="col">
                 <h4>Sections</h4>
-                <ui className="list-unstyled">
+                <ul className="list-unstyled">
                     <li>Home</li>
                     <li>Cities</li>
-                </ui>
-                </div>
+                </ul>
+                </div> */}
                 {/* Columna 3 */}
                 <div className="col">
                 <h4>Social networks</h4>
-                <ui className="list-unstyled">
-                    <li><a href='https://www.youtube.com/'  target='_blank'>Youtube</a></li>
-                    <li><a href='https://es-la.facebook.com/' target='_blank'>Facebook</a></li>
-                    <li><a href='https://www.instagram.com/?hl=es-la' target='_blank'>Instagram</a></li>
-                </ui>
+                <ul className="list-unstyled">
+                    <li><a href='https://www.youtube.com/'  target='_blank' rel="noopener noreferrer">Youtube</a></li>
+                    <li><a href='https://es-la.facebook.com/' target='_blank' rel="noopener noreferrer">Facebook</a></li>
+                    <li><a href='https://www.instagram.com/?hl=es-la' target='_blank' rel="noopener noreferrer">Instagram</a></li>
+                </ul>
                 </div>
             </div>
             <hr />

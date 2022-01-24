@@ -1,10 +1,11 @@
 import React from "react";
 import '../App.css';
-// import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Container, Offcanvas, Nav, NavDropdown } from 'react-bootstrap'
+import { Link } from "react-router-dom";
 
 
 const Header =()=> {
+
         return(
             <Navbar bg="transparent" expand={false} >
                 <Container fluid>
@@ -19,11 +20,11 @@ const Header =()=> {
                     </Offcanvas.Header>
                         <Offcanvas.Body>
                             <Nav className="justify-content-end flex-grow-1 pe-3">
-                            <Nav.Link href="#/">Home</Nav.Link>
-                            <Nav.Link href="./Pages/Cities.js">Cities</Nav.Link>
+                            <Nav.Link as={Link} to="/">Home</Nav.Link>
+                            <Nav.Link as={Link} to="/search">Cities</Nav.Link>
                             <NavDropdown title="Login" id="offcanvasNavbarDropdown">
-                                <NavDropdown.Item href="#action3">Sign Up</NavDropdown.Item>
-                                <NavDropdown.Item href="#action4">Sign In</NavDropdown.Item> 
+                                <NavDropdown.Item as={Link} to="/signup">Sign Up</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/signin">Sign In</NavDropdown.Item> 
                             </NavDropdown>
                             </Nav>
                         </Offcanvas.Body>
@@ -31,6 +32,7 @@ const Header =()=> {
                 </Container>
             </Navbar>        
         );
+        
     }
 
 export default Header;

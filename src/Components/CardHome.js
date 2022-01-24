@@ -1,5 +1,6 @@
 import React from 'react'
 import './Cards.css'
+import { NavLink } from 'react-router-dom';
 
 
 function CardHome({title, img, url, text}) {
@@ -15,9 +16,11 @@ function CardHome({title, img, url, text}) {
                         text ? text :  'Error'
                     }
                 </p>
+                <NavLink to='/search'>
                 <a href={url} className='btn btn-outline-secondary rounded-0'>
                     Go to Cities
                 </a>
+                </NavLink>
 
             </div>
         </div>
